@@ -10,19 +10,24 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 <p align="center">
   <img src="docs/images/产品核心功能宣传图.png" alt="产品核心功能宣传图 width="100%">
-   <sub>看见重要，预见完成。让每一次待办，都轻盈发光。</sub>
+  
+ 看见重要，预见完成。让每一次待办，都轻盈发光。
+ 
 </p>
 
 <p align="center">
   <img src="docs/images/软件界面展示.jpg" alt="Liquid Todo — Focus, softly." width="100%">
-  <sub>先做重要的，再做紧急的。让每一次完成都被清晰看见。</sub>
+  
+ 先做重要的，再做紧急的。让每一次完成都被清晰看见。
+ 
 </p>
 
 <p align="center">
   <img src="docs/images/隐私保护宣传图.jpg" alt="保护你的隐私" width="100%">
 </p>
 <p align="center">
-  <sub>连网都不需要，何况窥探。</sub>
+  
+  连网都不需要，何况窥探。
 </p>
 
 <p align="center">
