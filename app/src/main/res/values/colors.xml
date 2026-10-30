@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launch_top">#EEF3FF</color>
+    <color name="launch_center">#F4F1FF</color>
+    <color name="launch_bottom">#FBEEFF</color>
+    <color name="accent">#5B7CFA</color>
+</resources>
