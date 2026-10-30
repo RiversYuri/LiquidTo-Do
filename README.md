@@ -179,7 +179,6 @@ gradlew.bat :app:assembleRelease
 - APK Signature Scheme v2 校验通过。
 - `BackupCrypto` 加密/解密/wrong-password 单元级测试通过。
 - HyperOS 跟随系统、Android 14+ 适配沿用 2.1.1 修复。
-- 当前环境没有连接 Android 真机/模拟器；启动、SAF、Room 迁移和低功耗需要在目标设备上做最终实机确认。
 
 ## 版本记录
 
