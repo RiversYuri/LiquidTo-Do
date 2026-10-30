@@ -62,34 +62,14 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 - 恢复通过 `ACTION_OPEN_DOCUMENT` 选择文件，解密后展示条目摘要，可选择**合并**或**覆盖**。
   - 合并只加入备份中不存在的条目，保留当前数据；
   - 覆盖替换当前全部待办与标签。
-- v3.2.2 修复：备份直接携带当前 JS 状态，恢复在网页侧解析并立即写入清单，不再依赖“等待原生重建”才显示数据。
-- v3.2.3 修复：合并时备份条目复用已有 ID 但标题不同，会生成新 ID 插入，不再被静默丢弃。
-- 不需要存储权限，不使用网络，不上传任何数据。
 
 ### 外观与体验
 - 浅色 / 深色主题；右上角快捷按钮 + 设置页开关。
-- 跟随系统：Xiaomi HyperOS 3.0 / Android 14+ 通过原生 `Configuration.uiMode` 同步。
-- 兼容模式：保留玻璃和界面动效，仅降低模糊和无限环境动画，并记住选择。
-- 低功耗运行：**默认开启**；减少环境动画、背景模糊与后台占用。关闭时会弹出二级确认，提示功耗、发热和稳定性风险。
-- 原生开屏覆盖层 + WebView 交叉淡入，消除白屏闪烁。
-- 分时段问候：深夜提示“早些休息”，不再使用“慢慢来”。
 - 矩阵单个象限任务较多时可展开/收起。
 - 英文界面：设置页可切换简体中文 / English。
 - 首次启动同时提供 **语言选择** 与隐私政策 / 用户协议同意页；设置页可随时查看。
 - 关于页提供 GitHub 仓库入口：<https://github.com/RiversYuri/LiquidTo-Do>。
 - 关于页可查看完整更新日志。
-
-### 设置与关于
-- 跟随系统 / 深色模式。
-- 显示语言：简体中文 / English。
-- 兼容模式 / 低功耗运行。
-- 标签管理。
-- 数据与备份。
-- 隐私政策 / 用户协议。
-- 开发者：**Rivers Yuri**
-- 联系邮箱：**flicks.meek.3y@icloud.com**
-- 版本、隐私说明、更新日志。
-- GitHub 仓库：`RiversYuri/LiquidTo-Do`。
 
 ## 数据与隐私
 
@@ -160,25 +140,6 @@ app/src/main/
 - 数据：Room 负责结构化持久化，SharedPreferences 负责轻量设置。
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
 
-## 构建
-
-需要 JDK 17+、Android SDK（platform 35、build-tools 35.0.0）：
-
-```text
-gradlew.bat :app:assembleRelease
-```
-
-首次构建会从 Google Maven / Maven Central 下载 AndroidX Room 依赖。  
-`local.properties` 中的 `sdk.dir` 指向本机 Android SDK。
-
-## 验证状态
-
-- Release 构建成功。
-- Android Lint：**0 error**。
-- APK Signature Scheme v2 校验通过。
-- `BackupCrypto` 加密/解密/wrong-password 单元级测试通过。
-- HyperOS 跟随系统、Android 14+ 适配沿用 2.1.1 修复。
-
 ## 版本记录
 
-见 [CHANGELOG.md](CHANGELOG.md)。最近版本：3.2.3、3.2.2、3.2.1、3.1.0、3.0.0、2.1.1、2.1.0、2.0.1、2.0.0、1.0.1、1.0.0。
+见 [CHANGELOG.md](CHANGELOG.md)。最近版本：3.2.3
