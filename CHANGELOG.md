@@ -1,4 +1,14 @@
 # 更新日志 · 流光待办 / Liquid Todo
+## 3.2.4（2026-10-30）
+
+### 新增
+- 在“隐私与协议”新增 **开源许可证** 界面。
+- 列出 AndroidX Room、AndroidX SQLite、AndroidX Architecture Core、AndroidX Annotation、Kotlin Standard Library 等运行时组件。
+- 点击任一组件可查看版本、开源许可证类型、版权声明与 Apache 2.0 许可提示。
+- 提供“查看完整许可证”入口，打开 Apache License 2.0 官方页面。
+- 版本号升级为 3.2.4（versionCode 12）。
+
+---
 
 ## 3.2.3（2026-10-30）
 
