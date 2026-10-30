@@ -146,4 +146,4 @@ app/src/main/
 
 ## 版本记录
 
-见 [CHANGELOG.md](CHANGELOG.md)。最近版本：3.2.3
+见 [CHANGELOG.md](CHANGELOG.md)。最近版本：3.2.4
