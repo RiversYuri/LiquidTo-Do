@@ -6,7 +6,7 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 ## 📦 下载
 👉 [前往 Releases 下载最新 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
 <p align="center">
-  <img src="docs/images/hero-light.png" alt="图片敬请期待 width="100%">
+  <img src="docs/images/产品核心功能宣传图.png" alt="产品核心功能宣传图 width="100%">
 </p>
 
 <p align="center">
