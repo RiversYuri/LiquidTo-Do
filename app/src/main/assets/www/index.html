@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#eef3ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <title>流光待办 · Liquid Todo</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 6.8"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h7"/><circle cx="4.5" cy="6" r="1.1" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.1" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="7.2" height="7.2" rx="2.2"/><rect x="13.6" y="3.2" width="7.2" height="7.2" rx="2.2"/><rect x="3.2" y="13.6" width="7.2" height="7.2" rx="2.2"/><rect x="13.6" y="13.6" width="7.2" height="7.2" rx="2.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V4.5M16 20v-6.5M22 20H2.5"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M4 5.2h8.1L20 12l-7.9 6.8H4z"/><circle cx="8.2" cy="12" r="1.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l4.1-.9L18.8 8.4a2.8 2.8 0 0 0-4-4L4.1 15.1 4 20Z"/><path d="M13.6 5.6l4.8 4.8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="3"/><path d="M4.2 6.8 12 12.8l7.8-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.6v2.1M12 19.3v2.1M21.4 12h-2.1M4.7 12H2.6M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5M18.6 18.6l-1.5-1.5M6.9 6.9L5.4 5.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.8 14.2A8.8 8.8 0 1 1 9.8 3.2a7.1 7.1 0 0 0 11 11Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.4" y="5.2" width="17.2" height="15.4" rx="3"/><path d="M7.8 3.2v3.8M16.2 3.2v3.8M3.8 10.2h16.4"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21.5c3.8 0 6.7-2.7 6.7-6.3 0-3.1-2.3-5.4-4-7.6-.7-.9-1.3-2-1.3-3.4-2 1.9-3.1 3.8-3.1 5.9 0 1.2.4 2.1 1 3-1.3-.4-2.3-1.4-2.9-2.7-1.7 1.8-3.1 3.5-3.1 5.4 0 3.3 2.8 5.7 6.7 5.7Z"/><path d="M12 21.4c1.6 0 2.8-1.2 2.8-2.7 0-1.4-.9-2.3-1.7-3.3-.5-.6-.9-1.2-1.1-1.9-1 1.1-1.6 2-1.6 3.2 0 .8.3 1.4.7 2-.6-.2-1-.6-1.3-1.1-.4.6-.6 1.2-.6 1.9 0 1.1 1.2 1.9 2.8 1.9Z"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 2.8l1.5 5.2 5.2 1.5-5.2 1.5-1.5 5.2-1.5-5.2-5.2-1.5 5.2-1.5L12 2.8Z"/><path d="M19 15.4l.7 2.2 2.2.7-2.2.7-.7 2.2-.7-2.2-2.2-.7 2.2-.7.7-2.2Z"/><path d="M4.7 14.5l.5 1.7 1.7.5-1.7.5-.5 1.7-.5-1.7-1.7-.5 1.7-.5.5-1.7Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.2 6.2l11.6 11.6M17.8 6.2L6.2 17.8"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.6h6V7M6.5 7l.8 12.2h9.4L17.5 7M10 10.8v4.8M14 10.8v4.8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6.8l5.2 5.2-5.2 5.2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 7.2V12l3.2 2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10.5" rx="3"/><path d="M8.2 10V7.6a3.8 3.8 0 0 1 7.6 0V10"/><path d="M12 14.3v2.2"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 5.5l6.5 6.5L9 18.5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.7"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.7"/><path d="M3.5 12h17M12 3.3c2.4 2.3 3.6 5.2 3.6 8.7s-1.2 6.4-3.6 8.7c-2.4-2.3-3.6-5.2-3.6-8.7S9.6 5.6 12 3.3Z"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M9.2 20.2v-3.1c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.4 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.5 10.5 0 0 1 5.4 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.2-2.6 5.1-5.1 5.4.4.3.7 1 .7 2v3.1"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8l7.2 2.9v5.6c0 4.7-3 8-7.2 9.9-4.2-1.9-7.2-5.2-7.2-9.9V5.7L12 2.8Z"/><path d="M8.6 12.2l2.3 2.3 4.6-4.8"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4.2C11.5 3.4 5.1 7.3 4.4 14.2c-.4 3.7 2.2 6.1 5.7 5.7C16.9 19.2 19.4 12.2 20 4.2Z"/><path d="M4.6 21c1.1-5.1 4.1-8.8 8.5-11.2"/></symbol>
+  </svg>
+
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+    <span class="orb orb-d"></span>
+    <span class="light-veil"></span>
+    <span class="grain"></span>
+  </div>
+
+  <div class="splash" id="splash" aria-hidden="true">
+    <div class="splash-mark">
+      <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
+    </div>
+    <div class="splash-word">流光待办</div>
+    <div class="splash-sub">LIQUID TODO</div>
+  </div>
+
+  <button class="icon-btn glass theme-toggle" id="themeBtn" aria-label="切换深色模式" title="切换外观">
+    <svg class="icon theme-icon" id="themeIcon"><use href="#i-moon"/></svg>
+  </button>
+
+  <div class="app-shell">
+    <main class="views" id="views">
+
+      <section class="view is-active" data-view-panel="list" aria-label="待办清单">
+        <header class="screen-head">
+          <p class="eyebrow"><span id="dateLabel">10月29日 · 星期三</span></p>
+          <h1 id="greeting">晚上好，<span class="gradient-text">慢慢来</span></h1>
+          <p class="subline" id="subline">所有重要的事，都值得被温柔对待。</p>
+        </header>
+
+        <section class="hero-card glass" aria-label="今日进度">
+          <span class="hero-aurora" aria-hidden="true"></span>
+          <div class="hero-copy">
+            <span class="hero-label"><svg class="icon"><use href="#i-sparkles"/></svg>今日节奏</span>
+            <div class="hero-count"><strong id="heroDone">2</strong><span class="hero-slash">/</span><span id="heroTotal">5</span><em>件</em></div>
+            <p class="hero-hint" id="heroHint">还剩 3 件，先完成最重要的一件。</p>
+          </div>
+          <div class="progress-ring" id="progressRing" style="--progress: 40" role="img" aria-label="今日完成 40%">
+            <div class="ring-inner"><strong id="ringPct">40<span>%</span></strong><small>已完成</small></div>
+          </div>
+        </section>
+
+        <div class="segmented glass" id="segmented" role="tablist" aria-label="筛选待办">
+          <span class="segment-indicator" aria-hidden="true"></span>
+          <button class="segment is-active" data-filter="all" role="tab" aria-selected="true">全部</button>
+          <button class="segment" data-filter="today" role="tab" aria-selected="false">今天</button>
+          <button class="segment" data-filter="important" role="tab" aria-selected="false">重要</button>
+          <button class="segment" data-filter="done" role="tab" aria-selected="false">完成</button>
+        </div>
+
+        <div class="sort-row" id="sortBar" role="group" aria-label="排序方式">
+          <span class="sort-label">排序</span>
+          <button class="sort-chip is-active" type="button" data-sort="priority">重要程度</button>
+          <button class="sort-chip" type="button" data-sort="urgency">紧急程度</button>
+          <button class="sort-chip" type="button" data-sort="custom">自定义</button>
+        </div>
+
+        <div class="tag-filter-wrap">
+          <div class="tag-filter" id="tagFilter" role="group" aria-label="标签筛选"></div>
+        </div>
+
+        <div class="list-meta">
+          <span id="listCaption">3 件待办</span>
+          <div class="list-meta-right">
+            <button class="clear-done-inline" id="clearDoneInline" type="button" hidden>
+              <svg class="icon"><use href="#i-trash"/></svg>清空
+            </button>
+          </div>
+        </div>
+
+        <div class="task-list" id="taskList" aria-live="polite"></div>
+
+        <div class="empty-state glass" id="emptyState" hidden>
+          <span class="empty-icon"><svg class="icon"><use href="#i-sparkles"/></svg></span>
+          <strong id="emptyTitle">这一刻，清单是空的</strong>
+          <p id="emptyText">给自己留一点呼吸，或添加一件想做的事。</p>
+          <button class="empty-add" id="emptyAdd">添加待办<svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </section>
+
+      <section class="view" data-view-panel="matrix" aria-label="任务矩阵" hidden>
+        <header class="screen-head">
+          <p class="eyebrow">EISENHOWER MATRIX</p>
+          <h1>任务<span class="gradient-text">矩阵</span></h1>
+          <p class="subline">先做重要的，再做紧急的。</p>
+        </header>
+
+        <div class="matrix-grid" id="matrixGrid">
+          <article class="matrix-card q1 glass" data-quadrant="q1">
+            <div class="q-top"><span class="q-icon"><svg class="icon"><use href="#i-flame"/></svg></span><span class="q-count" data-count="q1">0</span></div>
+            <h2>重要且紧急</h2>
+            <p class="q-action">立即去做</p>
+            <div class="q-tasks" data-tasks="q1"></div>
+          </article>
+          <article class="matrix-card q2 glass" data-quadrant="q2">
+            <div class="q-top"><span class="q-icon"><svg class="icon"><use href="#i-calendar"/></svg></span><span class="q-count" data-count="q2">0</span></div>
+            <h2>重要不紧急</h2>
+            <p class="q-action">计划去做</p>
+            <div class="q-tasks" data-tasks="q2"></div>
+          </article>
+          <article class="matrix-card q3 glass" data-quadrant="q3">
+            <div class="q-top"><span class="q-icon"><svg class="icon"><use href="#i-arrow"/></svg></span><span class="q-count" data-count="q3">0</span></div>
+            <h2>紧急不重要</h2>
+            <p class="q-action">尽快处理</p>
+            <div class="q-tasks" data-tasks="q3"></div>
+          </article>
+          <article class="matrix-card q4 glass" data-quadrant="q4">
+            <div class="q-top"><span class="q-icon"><svg class="icon"><use href="#i-leaf"/></svg></span><span class="q-count" data-count="q4">0</span></div>
+            <h2>不紧急不重要</h2>
+            <p class="q-action">稍后再看</p>
+            <div class="q-tasks" data-tasks="q4"></div>
+          </article>
+        </div>
+
+        <aside class="insight-card glass">
+          <span class="insight-icon"><svg class="icon"><use href="#i-sparkles"/></svg></span>
+          <div>
+            <strong>今日建议</strong>
+            <p id="matrixInsight">把最好的精力留给「重要不紧急」。那才是让生活变好的部分。</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="view" data-view-panel="stats" aria-label="完成统计" hidden>
+        <header class="screen-head">
+          <p class="eyebrow">YOUR RHYTHM</p>
+          <h1>节奏<span class="gradient-text">统计</span></h1>
+          <p class="subline">看见每一次完成，累积成的改变。</p>
+        </header>
+
+        <section class="stat-hero glass">
+          <div>
+            <span class="stat-kicker">最近 7 天</span>
+            <div class="stat-big"><strong id="weekDone">8</strong><span>件完成</span></div>
+            <span class="delta-pill" id="weekDelta"><svg class="icon"><use href="#i-sparkles"/></svg>比上周更从容</span>
+          </div>
+          <div class="mini-ring" id="miniRing" style="--progress: 68" role="img" aria-label="本周目标完成 68%">
+            <div><strong id="miniPct">68</strong><span>%</span></div>
+          </div>
+        </section>
+
+        <section class="chart-card glass">
+          <div class="card-head"><h2>完成趋势</h2><span>近 7 天</span></div>
+          <div class="bar-chart" id="barChart"></div>
+          <div class="bar-labels" id="barLabels"></div>
+        </section>
+
+        <div class="stat-duo">
+          <article class="mini-stat glass">
+            <span class="mini-stat-label">连续完成</span>
+            <strong><span id="streakDays">6</span><em>天</em></strong>
+            <div class="streak-dots" id="streakDots"></div>
+          </article>
+          <article class="mini-stat glass">
+            <span class="mini-stat-label">最高效的一天</span>
+            <strong class="mini-stat-word" id="bestDay">周三</strong>
+            <span class="mini-stat-foot" id="bestDayCount">完成 3 件</span>
+          </article>
+        </div>
+
+        <section class="dist-card glass">
+          <div class="card-head"><h2>优先级分布</h2><span>进行中</span></div>
+          <div class="dist-rows" id="distRows"></div>
+        </section>
+
+        <footer class="data-note">
+          <svg class="icon"><use href="#i-lock"/></svg>
+          <span>数据仅保存在此设备 · 无需联网</span>
+        </footer>
+        <div class="data-actions">
+          <button class="text-btn" id="clearDoneBtn">清空已完成</button>
+          <span>·</span>
+          <button class="text-btn" id="resetBtn">恢复示例数据</button>
+        </div>
+      </section>
+
+      <section class="view" data-view-panel="tags" aria-label="标签管理" hidden>
+        <header class="screen-head">
+          <button class="back-link" id="tagsBack" type="button">
+            <svg class="icon"><use href="#i-chevron"/></svg>设置
+          </button>
+          <p class="eyebrow">TAGS</p>
+          <h1>标签<span class="gradient-text">管理</span></h1>
+          <p class="subline">最多 5 个。删除标签只会移除关联，不会删除待办。</p>
+        </header>
+
+        <section class="tag-editor-card glass">
+          <div class="tag-editor-head">
+            <div>
+              <p class="tag-editor-kicker">NEW TAG</p>
+              <h2 id="tagEditorTitle">新建标签</h2>
+            </div>
+            <button class="text-btn" id="tagCancelEdit" type="button" hidden>取消编辑</button>
+          </div>
+          <label class="field">
+            <span class="field-label">标签名称</span>
+            <input id="tagNameInput" class="notes-field" type="text" maxlength="12" placeholder="例如：深度工作、家庭、灵感" autocomplete="off">
+          </label>
+          <div class="field">
+            <span class="field-label">颜色</span>
+            <div class="color-palette" id="colorPalette" role="group" aria-label="标签颜色"></div>
+          </div>
+          <button class="primary-btn tag-save-btn" id="saveTagBtn" type="button">
+            <span>添加标签</span>
+            <svg class="icon"><use href="#i-plus"/></svg>
+          </button>
+          <p class="tag-limit-hint" id="tagLimitHint">0 / 5</p>
+        </section>
+
+        <div class="tag-manage-list" id="tagManageList"></div>
+      </section>
+
+      <section class="view" data-view-panel="settings" aria-label="设置与关于" hidden>
+        <header class="screen-head">
+          <p class="eyebrow">PREFERENCES</p>
+          <h1>设置<span class="gradient-text">与关于</span></h1>
+          <p class="subline">让流光待办更懂你的节奏。</p>
+        </header>
+
+        <section class="settings-card glass" aria-labelledby="appearanceTitle">
+          <div class="settings-card-head">
+            <span class="settings-icon"><svg class="icon"><use href="#i-sun"/></svg></span>
+            <div>
+              <h2 id="appearanceTitle">外观</h2>
+              <p>选择你喜欢的明暗节奏</p>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">跟随系统</span>
+              <span class="setting-desc">根据系统的深色 / 浅色设置自动切换，无需手动调整</span>
+            </div>
+            <button class="switch" id="followSystemSwitch" type="button" role="switch" aria-checked="true" aria-label="跟随系统外观">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="setting-row" id="darkModeRow">
+            <div class="setting-copy">
+              <span class="setting-title">深色模式</span>
+              <span class="setting-desc" id="darkModeDesc">深色背景与柔和光晕，夜间更护眼</span>
+            </div>
+            <button class="switch" id="darkModeSwitch" type="button" role="switch" aria-checked="false" aria-label="深色模式">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="settings-card glass" aria-labelledby="languageTitle">
+          <div class="settings-card-head">
+            <span class="settings-icon is-blue"><svg class="icon"><use href="#i-globe"/></svg></span>
+            <div>
+              <h2 id="languageTitle">语言 / Language</h2>
+              <p>界面语言会记住你的选择</p>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">显示语言</span>
+              <span class="setting-desc">简体中文 / English</span>
+            </div>
+            <div class="lang-switch" id="langSwitch" role="group" aria-label="显示语言">
+              <button class="lang-btn is-active" type="button" data-lang="zh">中文</button>
+              <button class="lang-btn" type="button" data-lang="en">EN</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-card glass" aria-labelledby="stabilityTitle">
+          <div class="settings-card-head">
+            <span class="settings-icon is-mint"><svg class="icon"><use href="#i-sparkles"/></svg></span>
+            <div>
+              <h2 id="stabilityTitle">稳定性</h2>
+              <p>在质感与流畅之间找到平衡</p>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">兼容模式</span>
+              <span class="setting-desc">降低背景模糊与光斑动画，保留玻璃质感和界面动效。开启后会记住此选择。</span>
+            </div>
+            <button class="switch" id="safeModeSwitch" type="button" role="switch" aria-checked="false" aria-label="兼容模式">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">低功耗运行</span>
+              <span class="setting-desc">默认开启。减少环境动画与后台资源占用，长时间使用更省电；关闭后会提示可能的影响。</span>
+            </div>
+            <button class="switch" id="lowPowerSwitch" type="button" role="switch" aria-checked="true" aria-label="低功耗运行">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="settings-note">
+            <svg class="icon"><use href="#i-lock"/></svg>
+            <span>不联网 · 无登录 · 数据仅保存在此设备</span>
+          </div>
+        </section>
+
+        <section class="settings-card glass" aria-labelledby="tagsTitle">
+          <div class="settings-card-head">
+            <span class="settings-icon is-lilac"><svg class="icon"><use href="#i-tag"/></svg></span>
+            <div>
+              <h2 id="tagsTitle">分类与标签</h2>
+              <p>统一的标签分类，最多 5 个</p>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">标签管理</span>
+              <span class="setting-desc" id="tagSummary">还没有标签</span>
+            </div>
+            <button class="settings-action" id="manageTagsBtn" type="button">管理</button>
+          </div>
+        </section>
+
+        <section class="settings-card glass" aria-labelledby="backupTitle">
+          <div class="settings-card-head">
+            <span class="settings-icon is-blue"><svg class="icon"><use href="#i-lock"/></svg></span>
+            <div>
+              <h2 id="backupTitle">数据与备份</h2>
+              <p>AES-256 加密，完全离线</p>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">本地加密备份</span>
+              <span class="setting-desc">导出 .liquidbackup 文件；恢复时可选合并或覆盖当前数据，需要密码解密。</span>
+            </div>
+          </div>
+          <div class="backup-actions">
+            <button class="backup-btn" id="backupBtn" type="button">
+              <svg class="icon"><use href="#i-arrow"/></svg>备份数据
+            </button>
+            <button class="backup-btn is-quiet" id="restoreBtn" type="button">
+              <svg class="icon"><use href="#i-arrow"/></svg>恢复数据
+            </button>
+          </div>
+          <div class="settings-note">
+            <svg class="icon"><use href="#i-lock"/></svg>
+            <span>文件只写入你选择的本地位置，不上传任何数据</span>
+          </div>
+        </section>
+
+        <section class="settings-card glass" aria-labelledby="legalTitle">
+          <div class="settings-card-head">
+            <span class="settings-icon is-lilac"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <div>
+              <h2 id="legalTitle">隐私与协议</h2>
+              <p>了解数据如何被保存，以及使用约定</p>
+            </div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">隐私政策</span>
+              <span class="setting-desc">不联网、不收集账号、数据只在本机</span>
+            </div>
+            <button class="settings-action" id="privacyBtn" type="button">查看</button>
+          </div>
+          <div class="setting-row">
+            <div class="setting-copy">
+              <span class="setting-title">用户协议</span>
+              <span class="setting-desc">使用流光待办前请阅读并同意</span>
+            </div>
+            <button class="settings-action" id="termsBtn" type="button">查看</button>
+          </div>
+        </section>
+
+        <section class="about-card glass" aria-labelledby="aboutTitle">
+          <div class="about-top">
+            <span class="about-mark"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span>
+            <div>
+              <h2 id="aboutTitle">流光待办</h2>
+              <p>Liquid Todo · <span id="appVersion">3.2.3</span></p>
+            </div>
+          </div>
+          <p class="about-desc">把重要的事，放在光里。一款离线优先、尊重隐私的待办应用。</p>
+          <div class="about-rows">
+            <div class="about-row"><span>开发者</span><strong>Rivers Yuri</strong></div>
+            <div class="about-row">
+              <span>联系我</span>
+              <button class="email-link" id="emailBtn" type="button">
+                <svg class="icon"><use href="#i-mail"/></svg>flicks.meek.3y@icloud.com
+              </button>
+            </div>
+            <div class="about-row"><span>隐私</span><strong>不联网 · 不收集数据</strong></div>
+            <div class="about-row">
+              <span>GitHub</span>
+              <button class="github-link" id="githubBtn" type="button">
+                <svg class="icon"><use href="#i-github"/></svg>RiversYuri/LiquidTo-Do
+              </button>
+            </div>
+            <div class="about-row">
+              <span>版本</span>
+              <button class="version-link" id="aboutVersion" type="button" aria-label="版本 3.2.3">v3.2.3</button>
+            </div>
+          </div>
+          <div class="about-links">
+            <button class="text-btn" id="changelogBtn" type="button">查看更新日志</button>
+          </div>
+          <div class="about-footer">© 2026 Rivers Yuri · 保留所有权利</div>
+        </section>
+      </section>
+
+    </main>
+
+    <button class="fab" id="addBtn" aria-label="新建待办">
+      <span class="fab-glow" aria-hidden="true"></span>
+      <svg class="icon"><use href="#i-plus"/></svg>
+    </button>
+
+    <nav class="dock glass" aria-label="主导航">
+      <button class="dock-item is-active" data-view="list" aria-current="page">
+        <span class="dock-icon"><svg class="icon"><use href="#i-list"/></svg></span><span>清单</span>
+      </button>
+      <button class="dock-item" data-view="matrix">
+        <span class="dock-icon"><svg class="icon"><use href="#i-grid"/></svg></span><span>矩阵</span>
+      </button>
+      <button class="dock-item" data-view="stats">
+        <span class="dock-icon"><svg class="icon"><use href="#i-chart"/></svg></span><span>统计</span>
+      </button>
+      <button class="dock-item" data-view="settings">
+        <span class="dock-icon"><svg class="icon"><use href="#i-settings"/></svg></span><span>设置</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-hidden="true">
+    <div class="sheet-surface glass">
+      <span class="sheet-grab" aria-hidden="true"></span>
+      <header class="sheet-head">
+        <div>
+          <p class="sheet-kicker" id="sheetKicker">NEW TASK</p>
+          <h2 id="sheetTitle">新建待办</h2>
+        </div>
+        <button class="icon-btn sheet-close" id="closeSheet" type="button" aria-label="关闭">
+          <svg class="icon"><use href="#i-x"/></svg>
+        </button>
+      </header>
+
+      <form id="taskForm" class="sheet-form" novalidate>
+        <div class="sheet-scroll">
+          <label class="field">
+            <span class="field-label">想完成什么</span>
+            <input id="titleInput" class="title-field" type="text" maxlength="60" placeholder="写下一件重要的小事…" autocomplete="off" required>
+            <span class="field-error" id="titleError" hidden>先写下一件想做的事吧</span>
+          </label>
+
+          <label class="field">
+            <span class="field-label">备注 <em>可选</em></span>
+            <textarea id="notesInput" class="notes-field" rows="2" maxlength="180" placeholder="补充一点背景，或下一步 action…"></textarea>
+          </label>
+
+          <fieldset class="field">
+            <legend class="field-label">重要程度</legend>
+            <div class="choice-row" id="priorityChoices" role="group" aria-label="重要程度">
+              <button class="choice" type="button" data-value="1"><span class="choice-dot p1"></span>低</button>
+              <button class="choice" type="button" data-value="2"><span class="choice-dot p2"></span>中</button>
+              <button class="choice" type="button" data-value="3"><span class="choice-dot p3"></span>高</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend class="field-label">紧急程度</legend>
+            <div class="choice-row" id="urgencyChoices" role="group" aria-label="紧急程度">
+              <button class="choice" type="button" data-value="1"><span class="choice-dot u1"></span>从容</button>
+              <button class="choice" type="button" data-value="2"><span class="choice-dot u2"></span>较急</button>
+              <button class="choice" type="button" data-value="3"><span class="choice-dot u3"></span>紧急</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend class="field-label">截止日期</legend>
+            <div class="date-chips" id="dateChips">
+              <button class="date-chip" type="button" data-offset="0">今天</button>
+              <button class="date-chip" type="button" data-offset="1">明天</button>
+              <button class="date-chip" type="button" data-offset="2">后天</button>
+              <button class="date-chip" type="button" data-offset="none">不设期限</button>
+            </div>
+            <label class="date-input-wrap">
+              <svg class="icon"><use href="#i-calendar"/></svg>
+              <span id="dateInputLabel">选择具体日期</span>
+              <input type="date" id="dateInput" aria-label="选择具体日期">
+              <svg class="icon chev"><use href="#i-chevron"/></svg>
+            </label>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend class="field-label">标签 <em>可选</em></legend>
+            <div class="tag-choice-row" id="tagChoices" role="group" aria-label="标签"></div>
+          </fieldset>
+
+          <div class="sheet-actions" id="sheetActions" hidden>
+            <button class="ghost-btn" type="button" id="toggleDoneBtn"><svg class="icon"><use href="#i-check"/></svg><span>标记完成</span></button>
+            <button class="ghost-btn is-danger" type="button" id="deleteTaskBtn"><svg class="icon"><use href="#i-trash"/></svg><span>删除</span></button>
+          </div>
+        </div>
+
+        <footer class="sheet-footer">
+          <button class="primary-btn" type="submit" id="saveTaskBtn">
+            <span>添加待办</span>
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </button>
+        </footer>
+      </form>
+    </div>
+  </section>
+
+  <div class="consent-gate" id="consentGate" hidden>
+    <section class="consent-card glass" role="dialog" aria-modal="true" aria-labelledby="consentTitle">
+      <span class="consent-mark"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span>
+      <p class="dialog-kicker">BEFORE YOU BEGIN</p>
+      <h2 id="consentTitle">欢迎使用流光待办</h2>
+      <p class="consent-desc">
+        在开始之前，请阅读并同意《用户协议》和《隐私政策》。流光待办不联网、不收集账号，
+        你的待办和标签只保存在本机；加密备份由你自己保管。
+      </p>
+      <div class="consent-lang" id="consentLangSwitch" role="group" aria-label="Language">
+        <span>Language</span>
+        <button class="lang-btn is-active" type="button" data-lang="zh">中文</button>
+        <button class="lang-btn" type="button" data-lang="en">English</button>
+      </div>
+      <div class="consent-docs">
+        <button class="text-btn" id="consentPrivacy" type="button">隐私政策</button>
+        <span>·</span>
+        <button class="text-btn" id="consentTerms" type="button">用户协议</button>
+      </div>
+      <div class="consent-actions">
+        <button class="ghost-btn" id="consentDecline" type="button">暂不同意</button>
+        <button class="primary-btn" id="consentAgree" type="button">同意并继续</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="dialog-backdrop" id="dialogBackdrop" hidden>
+    <section class="dialog-card glass" id="dialogCard" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"></section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-dot"></span>
+    <span id="toastText">已保存</span>
+    <button id="toastAction" hidden>撤销</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
