@@ -3,7 +3,8 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 # 流光待办 · Liquid Todo
 
 一款离线优先的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
-
+## 📦 下载
+👉 [前往 Releases 下载最新 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
 <p align="center">
   <img src="docs/images/hero-light.png" alt="Liquid Todo — 把重要的事，放在光里。" width="100%">
 </p>
