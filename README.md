@@ -31,7 +31,16 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 <p align="center">
   <img src="docs/images/隐私保护宣传图.jpg" alt="保护你的隐私" width="100%">
 </p>
+<p align="center">
+  <sub>把重要的事，放在光里。</sub>
+</p>
 
+<p align="center">
+  <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="CHANGELOG.md">Changelog</a>
+  &nbsp;·&nbsp;
+  Android 8.0+ &nbsp;·&nbsp; Offline first
 
 ## 功能
 
