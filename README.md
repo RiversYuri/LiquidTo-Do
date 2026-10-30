@@ -21,7 +21,7 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
   Android 8.0+ &nbsp;·&nbsp; Offline first
 </p>
 
-当前版本：**3.2.3**（versionCode 11）   
+当前版本：**3.2.4**（versionCode 11）   
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 
 <p align="center">
