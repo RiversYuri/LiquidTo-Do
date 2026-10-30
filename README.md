@@ -13,18 +13,6 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 </p>
 
 <p align="center">
-  <sub>把重要的事，放在光里。</sub>
-</p>
-
-<p align="center">
-  <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
-  &nbsp;·&nbsp;
-  <a href="CHANGELOG.md">Changelog</a>
-  &nbsp;·&nbsp;
-  Android 8.0+ &nbsp;·&nbsp; Offline first
-</p>
-
-<p align="center">
   <img src="docs/images/软件界面展示.jpg" alt="Liquid Todo — Focus, softly." width="100%">
 </p>
 
