@@ -5,6 +5,7 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 一款离线优先的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
 ## 📦 下载
 👉 [前往 Releases 下载最新 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
+
 当前版本：**3.2.4**（versionCode 11）   
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 <p align="center">
