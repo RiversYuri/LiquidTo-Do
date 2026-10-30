@@ -170,8 +170,6 @@ gradlew.bat :app:assembleRelease
 首次构建会从 Google Maven / Maven Central 下载 AndroidX Room 依赖。  
 `local.properties` 中的 `sdk.dir` 指向本机 Android SDK。
 
-演示签名：`keystore/liquid-todo.jks`，配置在 `keystore.properties`。上架前请替换为自己的正式密钥。
-
 ## 验证状态
 
 - Release 构建成功。
