@@ -1,4 +1,4 @@
-# LiquidTo-Do-
+# LiquidTo-Do
 Put the important things in the light. An offline-first, privacy-respecting to-do app.
 # 流光待办 · Liquid Todo
 
