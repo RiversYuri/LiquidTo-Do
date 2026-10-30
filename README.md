@@ -1,5 +1,5 @@
 # LiquidTo-Do
-Put the important things in the light. An offline-first, privacy-respecting to-do app.
+Put the important things in the light. An offline-first, privacy-respecting to-do app.把重要的事，放在光里。
 # 流光待办 · Liquid Todo
 
 一款离线优先的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
