@@ -25,11 +25,11 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 
 <p align="center">
-  <img src="docs/images/软件界面展示.png" alt="Liquid Todo — Focus, softly." width="100%">
+  <img src="docs/images/软件界面展示.jpg" alt="Liquid Todo — Focus, softly." width="100%">
 </p>
 
 <p align="center">
-  <img src="docs/images/隐私保护宣传图.png" alt="保护你的隐私" width="100%">
+  <img src="docs/images/隐私保护宣传图.jpg" alt="保护你的隐私" width="100%">
 </p>
 
 
