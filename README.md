@@ -6,7 +6,7 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 ## 📦 下载
 👉 [前往 Releases 下载最新 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
 <p align="center">
-  <img src="docs/images/hero-light.png" alt="Liquid Todo — 把重要的事，放在光里。" width="100%">
+  <img src="docs/images/hero-light.png" alt="图片敬请期待 width="100%">
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 </p>
 
 <p align="center">
-  <img src="docs/images/feature-strip.png" alt="本地加密备份 · 统一标签 · 默认低功耗" width="100%">
+  <img src="docs/images/feature-strip.png" alt="图片敬请期待" width="100%">
 </p>
 
 
