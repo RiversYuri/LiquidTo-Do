@@ -134,11 +134,25 @@ app/src/main/
 
 ## 🌐 支持与新功能，随时为你准备
 
-<div style="border: 1px solid #ddd; border-radius: 10px; padding: 14px 18px; font-size: 13px; line-height: 1.8; background-color: #fafafa;">
+<div align="center" style="background: #f8f9fa; border-radius: 16px; padding: 24px 28px; max-width: 520px; margin: 0 auto; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
 
-📕 小红书　https://xhslink.cn/o/AqyB8AmY4X1
-🐦 微博　　https://weibo.com/u/7690048866  
-📺 哔哩哔哩　https://b23.tv/1KJQfJj      ✉️ Bug反馈邮箱　flicks.meek.3y@icloud.com
+<p style="margin: 0 0 14px 0; font-size: 15px; font-weight: 600; color: #333; letter-spacing: 0.3px;">📬 找到我</p>
+
+<div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;">
+
+<div style="text-align: left; min-width: 160px;">
+<span style="font-size: 17px;">📕</span> <a href="https://xhslink.cn/o/AqyB8AmY4X1" style="font-size: 13px; color: #555; text-decoration: none;">小红书</a><br>
+<span style="font-size: 17px;">🐦</span> <a href="https://weibo.com/u/7690048866" style="font-size: 13px; color: #555; text-decoration: none;">微博</a>
+</div>
+
+<div style="text-align: left; min-width: 140px;">
+<span style="font-size: 17px;">📺</span> <a href="https://b23.tv/1KJQfJj" style="font-size: 13px; color: #555; text-decoration: none;">哔哩哔哩</a><br>
+<span style="font-size: 17px;">✉️</span> <a href="mailto:flicks.meek.3y@icloud.com" style="font-size: 13px; color: #555; text-decoration: none;">Bug反馈邮箱</a>
+</div>
+
+</div>
+
+<p style="margin: 16px 0 0 0; font-size: 11px; color: #999; border-top: 1px solid #e0e0e0; padding-top: 12px;">把重要的事，放在光里。</p>
 
 </div>
 
