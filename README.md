@@ -132,11 +132,12 @@ app/src/main/
 - 数据：Room 负责结构化持久化，SharedPreferences 负责轻量设置。
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
 
-## 🌐 支持与新功能，随时为你准备。
+## 🌐 支持与新功能，随时为你准备
 
 📕 小红书 https://xhslink.cn/o/AqyB8AmY4X1
 🐦 微博 https://weibo.com/u/7690048866
 📺 哔哩哔哩 https://b23.tv/1KJQfJj
+✉️ 开发者 flicks.meek.3y@icloud.com
 <p align="center">
   <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
   &nbsp;·&nbsp;
