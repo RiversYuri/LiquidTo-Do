@@ -138,7 +138,7 @@ app/src/main/
 
 📕 小红书　https://xhslink.cn/o/AqyB8AmY4X1
 🐦 微博　　https://weibo.com/u/7690048866  
-📺 哔哩哔哩　https://b23.tv/1KJQfJj    ✉️ Bug反馈邮箱　flicks.meek.3y@icloud.com
+📺 哔哩哔哩　https://b23.tv/1KJQfJj      ✉️ Bug反馈邮箱　flicks.meek.3y@icloud.com
 
 </div>
 
