@@ -28,6 +28,7 @@
   
   连网都不需要，何况窥探。
 </p>
+
 ## 认识一下全新的 Liquid Todo3.0
 
 ### 待办与优先级
@@ -146,4 +147,4 @@ app/src/main/
   &nbsp;·&nbsp;
   <a href="CHANGELOG.md">Changelog</a>
   &nbsp;·&nbsp;
-  Android 8.0+ &nbsp;·&nbsp; Offline first
+  Android 8.0+ &nbsp;·&nbsp; Offline first ©Rivers Yuri 2026 All rights reserved.
