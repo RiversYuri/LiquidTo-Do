@@ -133,27 +133,31 @@ app/src/main/
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
 
 ## 🌐 支持与新功能，随时为你准备
-<div align="center" style="background: #f8f9fa; border-radius: 14px; padding: 20px 26px; max-width: 380px; margin: 0 auto;">
+<div align="center" style="background: #f8f9fa; border-radius: 14px; padding: 22px 28px; max-width: 400px; margin: 0 auto;">
+
 <p style="margin: 4px 0; font-size: 14px;">
 📕 <a href="https://xhslink.cn/o/AqyB8AmY4X1" style="color: #666; text-decoration: none;">小红书</a> &nbsp;&nbsp;
 🐦 <a href="https://weibo.com/u/7690048866" style="color: #666; text-decoration: none;">微博</a> &nbsp;&nbsp;
 📺 <a href="https://b23.tv/1KJQfJj" style="color: #666; text-decoration: none;">哔哩哔哩</a>
 </p>
 
-<p style="margin: 4px 0 0 0; font-size: 14px;">
+<p style="margin: 6px 0 0 0; font-size: 14px;">
 ✉️ <a href="mailto:flicks.meek.3y@icloud.com" style="color: #666; text-decoration: none;">Bug反馈邮箱</a>
 </p>
 
-<p style="margin: 14px 0 0 0; font-size: 11px; color: #aaa; border-top: 1px solid #e8e8e8; padding-top: 10px;">把重要的事，放在光里。</p>
+<p style="margin: 16px 0 0 0; font-size: 11px; color: #aaa; border-top: 1px solid #e8e8e8; padding-top: 12px;">把重要的事，放在光里。</p>
 
 </div>
 
-<p align="center">
-  <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
+<p align="center" style="margin: 20px 0 8px 0;">
+  <a href="https://github.com/RiversYuri/LiquidTo-Do" style="color: #666;">GitHub</a>
   &nbsp;·&nbsp;
-  <a href="CHANGELOG.md">Changelog</a>
+  <a href="CHANGELOG.md" style="color: #666;">Changelog</a>
   &nbsp;·&nbsp;
   Android 8.0+ &nbsp;·&nbsp; Offline first
-  <div align="center" style="font-size: 12px; color: gray;">
+</p>
+
+<div align="center" style="font-size: 12px; color: #999;">
 © Rivers Yuri 2026 All rights reserved.
 </div>
+
