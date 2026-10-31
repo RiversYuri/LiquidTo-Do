@@ -134,10 +134,15 @@ app/src/main/
 
 ## 🌐 支持与新功能，随时为你准备
 
-📕 小红书 https://xhslink.cn/o/AqyB8AmY4X1
-🐦 微博 https://weibo.com/u/7690048866
-📺 哔哩哔哩 https://b23.tv/1KJQfJj
-✉️ 开发者 flicks.meek.3y@icloud.com
+<div style="border: 1px solid #ddd; border-radius: 10px; padding: 14px 18px; font-size: 13px; line-height: 1.8; background-color: #fafafa;">
+
+📕 小红书　https://xhslink.cn/o/AqyB8AmY4X1  
+🐦 微博　　https://weibo.com/u/7690048866  
+📺 哔哩哔哩　https://b23.tv/1KJQfJj  
+✉️ 开发者　flicks.meek.3y@icloud.com
+
+</div>
+
 <p align="center">
   <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
   &nbsp;·&nbsp;
