@@ -24,7 +24,7 @@
   连网都不需要，何况窥探。
 </p>
 
-## 认识一下全新的 Liquid Todo3.0
+## ✨ 认识一下全新的 Liquid Todo3.0
 
 ### 待办与优先级
 - 新建、编辑、完成、删除、撤销删除。
@@ -62,7 +62,7 @@
 - 关于页提供 GitHub 仓库入口：<https://github.com/RiversYuri/LiquidTo-Do>。
 - 关于页可查看完整更新日志。
 
-## 隐私，是一项基本人权。
+## 🛡️ 隐私，是一项基本人权。
 
 - 我们的Liquid Todo产品不收集任何数据。  
 没有网络权限，没有登录，没有账号，没有云同步，没有广告，更没有统计 SDK。  
@@ -77,7 +77,7 @@
 备份文件采用 **AES‑256‑GCM** 加密，密码只有你知道。  
 我们不申请存储权限。恢复时，只需通过系统文件选择器选择即可——简单、安全、透明。
 
-## 数据模型
+## 🗂️ 数据模型
 
 ```text
 tags
@@ -104,7 +104,7 @@ tasks
 
 `tasks.tagId` 是可选外键。标签删除后，关联待办保留，`tagId` 被置空。
 
-## 技术结构
+## ⚙️ 技术结构
 
 ```text
 app/src/main/
@@ -132,7 +132,7 @@ app/src/main/
 - 数据：Room 负责结构化持久化，SharedPreferences 负责轻量设置。
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
 
-## 支持与新功能，随时为你准备。
+## 🌐 支持与新功能，随时为你准备。
 
 📕 小红书 https://xhslink.cn/o/AqyB8AmY4X1
 🐦 微博 https://weibo.com/u/7690048866
@@ -142,4 +142,7 @@ app/src/main/
   &nbsp;·&nbsp;
   <a href="CHANGELOG.md">Changelog</a>
   &nbsp;·&nbsp;
-  Android 8.0+ &nbsp;·&nbsp; Offline first  ·  ©Rivers Yuri 2026 All rights reserved.
+  Android 8.0+ &nbsp;·&nbsp; Offline first
+  <div align="center" style="font-size: 12px; color: gray;">
+© Rivers Yuri 2026 All rights reserved.
+</div>
