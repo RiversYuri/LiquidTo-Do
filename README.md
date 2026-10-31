@@ -9,23 +9,18 @@
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 <p align="center">
   <img src="docs/images/产品核心功能宣传图.png" alt="产品核心功能宣传图 width="100%">
-  
  让每一次待办，都轻盈发光。
- 
 </p>
 
 <p align="center">
   <img src="docs/images/软件界面展示.jpg" alt="Liquid Todo — Focus, softly." width="100%">
-  
  先做重要的，再做紧急的。
- 
 </p>
 
 <p align="center">
   <img src="docs/images/隐私保护宣传图.jpg" alt="保护你的隐私" width="100%">
 </p>
-<p align="center">
-  
+<p align="center"> 
   连网都不需要，何况窥探。
 </p>
 
@@ -63,7 +58,7 @@
 - 浅色 / 深色主题；右上角快捷按钮 + 设置页开关。
 - 矩阵单个象限任务较多时可展开/收起。
 - 英文界面：设置页可切换简体中文 / English。
-- 首次启动同时提供 **语言选择** 与隐私政策 / 用户协议同意页；设置页可随时查看。
+- 首次启动同时提供 **语言选择**
 - 关于页提供 GitHub 仓库入口：<https://github.com/RiversYuri/LiquidTo-Do>。
 - 关于页可查看完整更新日志。
 
@@ -147,4 +142,4 @@ app/src/main/
   &nbsp;·&nbsp;
   <a href="CHANGELOG.md">Changelog</a>
   &nbsp;·&nbsp;
-  Android 8.0+ &nbsp;·&nbsp; Offline first ©Rivers Yuri 2026 All rights reserved.
+  Android 8.0+ &nbsp;·&nbsp; Offline first · ©Rivers Yuri 2026 All rights reserved.
