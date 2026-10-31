@@ -1,9 +1,8 @@
-# LiquidTo-Do
-Put the important things in the light. An offline-first, privacy-respecting to-do app.把重要的事，放在光里。一款离线优先、尊重隐私的待办应用。
 # 流光待办 · Liquid Todo
+把重要的事，放在光里。一款离线优先、尊重隐私的待办应用。
 
 一款离线优先的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
-## 📦 下载
+## 📦现在就免费拥有 Liquid Todo3.0
 👉 [前往 Releases 下载最新 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
 
 当前版本：**3.2.4**（versionCode 11）   
@@ -11,14 +10,14 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 <p align="center">
   <img src="docs/images/产品核心功能宣传图.png" alt="产品核心功能宣传图 width="100%">
   
- 看见重要，预见完成。让每一次待办，都轻盈发光。
+ 让每一次待办，都轻盈发光。
  
 </p>
 
 <p align="center">
   <img src="docs/images/软件界面展示.jpg" alt="Liquid Todo — Focus, softly." width="100%">
   
- 先做重要的，再做紧急的。让每一次完成都被清晰看见。
+ 先做重要的，再做紧急的。
  
 </p>
 
@@ -37,7 +36,7 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
   &nbsp;·&nbsp;
   Android 8.0+ &nbsp;·&nbsp; Offline first
 
-## 功能
+## 认识一下全新的 Liquid Todo3.0
 
 ### 待办与优先级
 - 新建、编辑、完成、删除、撤销删除。
@@ -75,19 +74,20 @@ Put the important things in the light. An offline-first, privacy-respecting to-d
 - 关于页提供 GitHub 仓库入口：<https://github.com/RiversYuri/LiquidTo-Do>。
 - 关于页可查看完整更新日志。
 
-## 数据与隐私
+## 隐私，是一项基本人权。
 
-- **不申请 `INTERNET` 权限**，应用无法联网。
-- **没有登录、账号、云同步、广告、统计 SDK**。
-- 唯一权限：`VIBRATE`（触感反馈）。
-- 任务/标签：Room 数据库 `liquid_todo.db`。
-- 主题：SharedPreferences `todo_theme`。
-- 兼容模式/低功耗：SharedPreferences `safe_mode` / `low_power_mode`。
-- 排序/语言：SharedPreferences `list_sort` / `app_lang`。
-- 隐私同意：SharedPreferences `privacy_accepted`。
-- 标签迁移标记：SharedPreferences `tag_schema_v1`。
-- 旧版 `todo_state_v1` JSON 会在首次启动时迁移进 Room，原始值保留用于回退。
-- 联系开发者通过系统 `mailto:` 邮件应用，不经过应用内网络请求。
+- 我们的Liquid Todo产品不收集任何数据。  
+没有网络权限，没有登录，没有账号，没有云同步，没有广告，更没有统计 SDK。  
+一切，只属于你的设备。
+数据仅保存在本地的 **SharedPreferences** 与 **Room** 数据库中，从不离开你的掌控。
+
+- 权限，能少则少。  
+仅申请 **VIBRATE** 震动权限，只为给你恰到好处的触感反馈。
+联系开发者通过系统 `mailto:` 邮件应用，不经过应用内网络请求。
+
+- 备份，由你全权守护。  
+备份文件采用 **AES‑256‑GCM** 加密，密码只有你知道。  
+我们不申请存储权限。恢复时，只需通过系统文件选择器选择即可——简单、安全、透明。
 
 ## 数据模型
 
@@ -144,6 +144,10 @@ app/src/main/
 - 数据：Room 负责结构化持久化，SharedPreferences 负责轻量设置。
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
 
-## 版本记录
+## 支持与新功能，随时为你准备。
 
-见 [CHANGELOG.md](CHANGELOG.md)。最近版本：3.2.4
+div align="center">
+📕 小红书 https://xhslink.cn/o/AqyB8AmY4X1
+🐦 微博 https://weibo.com/u/7690048866
+📺 哔哩哔哩 https://b23.tv/1KJQfJj
+</div>
