@@ -28,14 +28,6 @@
   
   连网都不需要，何况窥探。
 </p>
-
-<p align="center">
-  <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
-  &nbsp;·&nbsp;
-  <a href="CHANGELOG.md">Changelog</a>
-  &nbsp;·&nbsp;
-  Android 8.0+ &nbsp;·&nbsp; Offline first
-
 ## 认识一下全新的 Liquid Todo3.0
 
 ### 待办与优先级
@@ -146,8 +138,12 @@ app/src/main/
 
 ## 支持与新功能，随时为你准备。
 
-div align="center">
 📕 小红书 https://xhslink.cn/o/AqyB8AmY4X1
 🐦 微博 https://weibo.com/u/7690048866
 📺 哔哩哔哩 https://b23.tv/1KJQfJj
-</div>
+<p align="center">
+  <a href="https://github.com/RiversYuri/LiquidTo-Do">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="CHANGELOG.md">Changelog</a>
+  &nbsp;·&nbsp;
+  Android 8.0+ &nbsp;·&nbsp; Offline first
