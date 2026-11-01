@@ -131,6 +131,9 @@ app/src/main/
 - UI：离线 HTML/CSS/JS，通过 `file:///android_asset` 加载。
 - 数据：Room 负责结构化持久化，SharedPreferences 负责轻量设置。
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
+- 
+- [![AI Declaration](https://img.shields.io/badge/AI%20Declaration-View-blue?style=for-the-badge)](AI-DECLARATION.md)
+
 
 ## 🌐 支持与新功能，随时为你准备
 <div align="center" style="background: #f8f9fa; border-radius: 14px; padding: 22px 28px; max-width: 400px; margin: 0 auto;">
