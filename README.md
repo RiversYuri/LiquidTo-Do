@@ -1,5 +1,6 @@
 # 流光待办 · Liquid Todo
 ### 把重要的事，放在光里。
+- [![AI Declaration](https://img.shields.io/badge/AI%20Declaration-View-blue?style=for-the-badge)](AI-DECLARATION.md)
 
 一款离线优先、尊重隐私的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
 ## 📦 现在就免费拥有 Liquid Todo3.0
@@ -131,8 +132,6 @@ app/src/main/
 - UI：离线 HTML/CSS/JS，通过 `file:///android_asset` 加载。
 - 数据：Room 负责结构化持久化，SharedPreferences 负责轻量设置。
 - 备份：对 Room 逻辑数据导出 JSON 后加密，避免直接复制 WAL 数据库造成不一致。
-- 
-- [![AI Declaration](https://img.shields.io/badge/AI%20Declaration-View-blue?style=for-the-badge)](AI-DECLARATION.md)
 
 
 ## 🌐 支持与新功能，随时为你准备
