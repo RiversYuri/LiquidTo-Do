@@ -10,6 +10,7 @@
 一款离线优先、尊重隐私的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
 ## 📦 现在就免费拥有 Liquid Todo3.0
 👉 [前往 Releases 下载正式版最新 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
+
 👉 [前往 Releases 下载预发布版本 APK](https://github.com/RiversYuri/LiquidTo-Do/releases?include_prereleases=true)
 
 
