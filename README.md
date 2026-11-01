@@ -1,7 +1,7 @@
 # 流光待办 · Liquid Todo
 ### 把重要的事，放在光里。
 [![AI Declaration](https://img.shields.io/badge/AI%20Declaration-View-blue?style=for-the-badge)](AI-DECLARATION.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![Privacy](https://img.shields.io/badge/Privacy-Policy-purple?style=for-the-badge)](PRIVACY.md)
 [![Security](https://img.shields.io/badge/Security-Policy-red?style=for-the-badge)](SECURITY.md)
 
