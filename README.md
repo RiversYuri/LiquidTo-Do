@@ -15,6 +15,7 @@
 
 
 当前正式版本：**3.2.4**（versionCode 11） 当前预发布版本:**3.2.6** 
+
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 <p align="center">
   <img src="docs/images/产品核心功能宣传图.png" alt="产品核心功能宣传图 width="100%">
