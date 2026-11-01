@@ -1,7 +1,7 @@
 # 流光待办 · Liquid Todo
 ### 把重要的事，放在光里。
 [![AI Declaration](https://img.shields.io/badge/AI%20Declaration-View-blue?style=for-the-badge)](AI-DECLARATION.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 
 一款离线优先、尊重隐私的 Android 待办应用，用「重要程度 × 紧急程度」组织任务。界面采用半透明玻璃、渐变光和柔和动效。
