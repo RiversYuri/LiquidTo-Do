@@ -1,14 +1,5 @@
 # AI 辅助开发声明 / AI-Assisted Development Declaration
 
-<style>
-  body { font-size: 12px; color: #666; line-height: 1.55; }
-  h1 { font-size: 19px; color: #444; }
-  h3 { font-size: 14px; color: #555; }
-  strong { color: #555; }
-  blockquote { color: #777; border-left: 3px solid #d8d8d8; padding-left: 10px; }
-  sub { color: #999; }
-  a { color: #777; }
-</style>
 
 <p align="center">
   <img src="AI-DECLARATION-logo.png" alt="流光待办 / Liquid Todo" width="360">
