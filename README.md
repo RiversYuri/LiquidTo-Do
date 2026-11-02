@@ -11,9 +11,7 @@
 
 
 ## 📦 现在就免费拥有 Liquid Todo3.0
-👉 [前往 Releases 下载 APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
-
-👉（当前推荐下载该版本） [前往 Releases 下载最新版本 APK](https://github.com/RiversYuri/LiquidTo-Do/releases?include_prereleases=true)
+👉 [前往 Releases 下载 最新免费正式版APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
 
 
 当前正式版本：**3.2.4**（versionCode 11） 当前预发布版本:**3.2.6** 
