@@ -14,7 +14,7 @@
 👉 [前往 Releases 下载 最新免费正式版APK](https://github.com/RiversYuri/LiquidTo-Do/releases/latest)
 
 
-当前正式版本：**3.2.4**（versionCode 11） 当前预发布版本:**3.2.6** 
+当前正式版本：**3.2.6**
 
 更新日志：[CHANGELOG.md](CHANGELOG.md)
 <p align="center">
